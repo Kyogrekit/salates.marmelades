@@ -1,9 +1,19 @@
 {
     "users": [
         {
+            "id": 1,
+            "username": "Denys",
+            "surname": "Garnat"
+        },
+        {
+            "id": 2,
+            "username": "Dimytrii",
+            "surname": "Mihali"
+        },
+        {
             "id": "100010001011000100001110000111001",
             "username": "YURA",
-            "serneme": "Lysencko",
+            "surname": "Lysencko",
             "balanse": "-1000"
         }
     ]
