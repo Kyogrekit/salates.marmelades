@@ -4,6 +4,11 @@
             "id": 1,
             "username": "Denys",
             "surename": "Garnat"
+        },
+        {
+            "id": 2,
+            "username": "Dimytrii",
+            "surename": "Mihali"
         }
     ]
 }
