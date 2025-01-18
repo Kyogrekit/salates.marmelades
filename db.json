@@ -3,12 +3,18 @@
         {
             "id": 1,
             "username": "Denys",
-            "surename": "Garnat"
+            "surname": "Garnat"
         },
         {
             "id": 2,
             "username": "Dimytrii",
-            "surename": "Mihali"
+            "surname": "Mihali"
+        },
+        {
+            "id": "100010001011000100001110000111001",
+            "username": "YURA",
+            "surname": "Lysencko",
+            "balanse": "-1000"
         }
     ]
 }
