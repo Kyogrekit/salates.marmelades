@@ -16,5 +16,14 @@
             "surname": "Lysencko",
             "balance": "-1000"
         }
+    ],
+    "products": [
+        {
+           "name": "",
+           "price": "",
+           "img": "",
+           "id":""
+        }
+
     ]
 }
