@@ -36,7 +36,7 @@ function addmarmalade( marmaladeObject ) {
 
     const template = `
     <div class="card">
-        <h2 class="card__name"></h2>
+        <h2 class="card__name">${name}</h2>
         <img src="${img}" alt="${name}" class="card__img">
         
         <span class="card__price">${price}</span>
