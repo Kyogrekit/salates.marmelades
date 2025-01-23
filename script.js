@@ -1,12 +1,18 @@
-const url = 'db.json';
+const url = 'product.json',
+      cardContainer = document.querySelector('.container');
+;
 
-async function  fetchmarmaladeList( url ){
-    const response = await fetch( url );
-    const data = await response.json();
+    fetch(url)
+        .then(async response => {
+            const data = await response.json();
+            console.log(data);
 
-    return data.results;
+            addmarmalade(data);
+        })
+        .catch(error => {
+            alert("Pokemon with this name or id does not exist.")
+        });
 
-}
 
 function fetchmarmalade( url ) {
     const response = awaitfetch( url );
@@ -27,46 +33,18 @@ function addmarmalade( marmaladeObject ) {
     const {
         id,
         name,
-        sprites: {
-            front_default,
-        },
-        types,
-        stats
+        img,
+        price
     } = pokemonObject;
 
-    const typesList = types
-                           .map(type => `<li class="card__type">${type.type.name}</li>`)
-                           .join('');
-    
-    const [ hp, attack, defense ] = stats;
-
     const template = `
-        <div class="card">
-            <span class="card__id">ID ${id}</span>  
-            <hr>
+    <div class="card">
+        <h2 class="card__name"></h2>
+        <img src="${img}" alt="${name}" class="card__img">
+        
+        <span class="card__price">${price}</span>
+    </div>
 
-            <h2 class="card__name">${name}</h2>
-            <img src="${front_default}" alt="${name}" class="card__img">
-
-            <div class="card__stats">
-                <div class="card__stat">
-                    <img src='./img/heart.png' alt="HP" class="card__stat-image">
-                    <span class="card__stat-value">${hp.base_stat}</span>
-                </div>
-
-                <div class="card__stat">
-                    <img src='./img/sword.png' alt="Attack" class="card__stat-image">
-                    <span class="card__stat-value">${attack.base_stat}</span>
-                </div>
-                
-                <div class="card__stat">
-                    <img src='./img/shield.png' alt="Defense" class="card__stat-image">
-                    <span class="card__stat-value">${defense.base_stat}</span>
-                </div>
-            </div>
-
-            <ul class="card__types">${typesList}</ul>
-        </div>
     `;
 
     cardContainer.insertAdjacentHTML( 'beforeend', template );
