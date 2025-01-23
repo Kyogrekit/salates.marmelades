@@ -1,46 +1,73 @@
-async function loadProducts() {
-    const url = 'db.json'; // URL или путь к вашему JSON-файлу
+const url = 'db.json';
 
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Ошибка загрузки: ${response.status} ${response.statusText}`);
-        }
+async function  fetchmarmaladeList( url ){
+    const response = await fetch( url );
+    const data = await response.json();
 
-        const products = await response.json();
-        renderProducts(products);
-    } catch (error) {
-        console.error("Ошибка:", error);
-        document.getElementById('products-container').innerHTML = `
-            <p style="color: red;">Ошибка загрузки данных. Попробуйте позже.</p>
-        `;
-    }
+    return data.results;
+
 }
 
-function renderProducts(products) {
-    const container = document.getElementById('products-container');
-    container.innerHTML = ''; // Очистка контейнера перед добавлением данных
+function fetchmarmalade( url ) {
+    const response = awaitfetch( url );
 
-    if (products.length === 0) {
-        container.innerHTML = '<p>Нет доступных продуктов.</p>';
-        return;
-    }
-
-    products.forEach(product => {
-        const { id, name, price, img } = product; // Деструктуризация данных продукта
-        const productDiv = document.createElement('div');
-        productDiv.className = 'product';
-
-        productDiv.innerHTML = `
-            <img src="${img}" alt="${name}" />
-            <h3>${name}</h3>
-            <p>Цена: ${price} руб.</p>
-            <p>ID: ${id}</p>
-        `;
-
-        container.appendChild(productDiv);
-    });
+    return response.json();
 }
 
-// Вызов функции для загрузки продуктов
-loadProducts();
+async function loadPokemons() {
+    const marmaladeList     = await fetchmarmaladeList( url ),
+    marmalade = marmaladeList.map( marmalade => fetchmarmalade( marmalade.url ) );
+    
+    marmalade = await Promise.all(marmaladePromises );
+    marmalade.forEach( addmarmalade );
+}
+
+
+function addmarmalade( marmaladeObject ) {
+    const {
+        id,
+        name,
+        sprites: {
+            front_default,
+        },
+        types,
+        stats
+    } = pokemonObject;
+
+    const typesList = types
+                           .map(type => `<li class="card__type">${type.type.name}</li>`)
+                           .join('');
+    
+    const [ hp, attack, defense ] = stats;
+
+    const template = `
+        <div class="card">
+            <span class="card__id">ID ${id}</span>  
+            <hr>
+
+            <h2 class="card__name">${name}</h2>
+            <img src="${front_default}" alt="${name}" class="card__img">
+
+            <div class="card__stats">
+                <div class="card__stat">
+                    <img src='./img/heart.png' alt="HP" class="card__stat-image">
+                    <span class="card__stat-value">${hp.base_stat}</span>
+                </div>
+
+                <div class="card__stat">
+                    <img src='./img/sword.png' alt="Attack" class="card__stat-image">
+                    <span class="card__stat-value">${attack.base_stat}</span>
+                </div>
+                
+                <div class="card__stat">
+                    <img src='./img/shield.png' alt="Defense" class="card__stat-image">
+                    <span class="card__stat-value">${defense.base_stat}</span>
+                </div>
+            </div>
+
+            <ul class="card__types">${typesList}</ul>
+        </div>
+    `;
+
+    cardContainer.insertAdjacentHTML( 'beforeend', template );
+}

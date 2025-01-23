@@ -1,0 +1,58 @@
+  
+    header {
+        background-color: #333; 
+        color: white;           
+        padding: 20px 0;       
+        text-align: center;     
+      }
+  
+     
+      .header-container {
+        display: flex;        
+        justify-content: space-between; 
+        align-items: center;     
+        padding: 0 20px;       } 
+  
+    
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+  
+      
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+  
+      nav a {
+        color: white;           
+        text-decoration: none;  
+        font-size: 18px;
+      }
+  
+      nav a:hover {
+        color: #ff6f61;        
+      }
+
+
+      .card {
+        width: 100%;
+    
+        margin-inline: auto;
+        padding: 20px;
+    
+        color: #fff;
+        font-size: 1rem;
+    
+        background-color: rgba(0, 0, 0, 0.85);
+        border: 3px solid #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 7px 1px rgb(255, 255, 255);
+    }
+    .card__id {
+        display: block;
+    
+        text-align: center;
+        font-size: 1.3em;
+    }
