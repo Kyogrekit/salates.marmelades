@@ -2,16 +2,16 @@ const url = 'product.json',
       cardContainer = document.querySelector('.container');
 ;
 
-    fetch(url)
-        .then(async response => {
-            const data = await response.json();
-            console.log(data);
+fetch(url)
+.then(async response => {
+    const data = await response.json();
+    console.log(data.products[0]);
 
-            addmarmalade(data);
-        })
-        .catch(error => {
-            alert("Pokemon with this name or id does not exist.")
-        });
+    addmarmalade(data.products[0]);
+})
+.catch(error => {
+    alert("Pokemon with this name or id does not exist.")
+});
 
 
 function fetchmarmalade( url ) {
@@ -35,7 +35,7 @@ function addmarmalade( marmaladeObject ) {
         name,
         img,
         price
-    } = pokemonObject;
+    } = marmaladeObject;
 
     const template = `
     <div class="card">
