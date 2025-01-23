@@ -1,31 +1,28 @@
-const url = 'product.json',
-      cardContainer = document.querySelector('.container');
-;
+const cardContainer = document.querySelector('.container');
 
-fetch(url)
-.then(async response => {
+const url = 'product.json';
+let marmaladers = [];
+
+async function fetchMarmaladeList(url) {
+    const response = await fetch(url);
     const data = await response.json();
-    console.log(data.products[0]);
 
-    addmarmalade(data.products[0]);
-})
-.catch(error => {
-    alert("Pokemon with this name or id does not exist.")
-});
+    console.log(data.products);
+    return data.products;
+    
+}
 
-
-function fetchmarmalade( url ) {
-    const response = awaitfetch( url );
+async function fetchPokemon(url) {
+    const response = await fetch(url);
 
     return response.json();
 }
 
-async function loadPokemons() {
-    const marmaladeList     = await fetchmarmaladeList( url ),
-    marmalade = marmaladeList.map( marmalade => fetchmarmalade( marmalade.url ) );
+async function loadMarmalades() {
+    const marmaladeList = await fetchMarmaladeList( url );
     
-    marmalade = await Promise.all(marmaladePromises );
-    marmalade.forEach( addmarmalade );
+    marmalades = await Promise.all(marmaladeList);
+    marmalades.forEach( addmarmalade );
 }
 
 
@@ -49,3 +46,5 @@ function addmarmalade( marmaladeObject ) {
 
     cardContainer.insertAdjacentHTML( 'beforeend', template );
 }
+
+loadMarmalades()
