@@ -1,20 +1,40 @@
 {
-    "users": [
+    "products": [
         {
-            "id": 1,
-            "username": "Denys",
-            "surname": "Garnat"
+           "name": "strawberry",
+           "price": "25$",
+           "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+           "id":"1"
         },
         {
-            "id": 2,
-            "username": "Dimytrii",
-            "surname": "Mihali"
+           "name": "strawberry",
+           "price": "25$",
+           "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+           "id":"2"
         },
         {
-            "id": "100010001011000100001110000111001",
-            "username": "YURA",
-            "surname": "Lysencko",
-            "balance": "-1000"
-        }
-    ]
-}
+           "name": "strawberry",
+           "price": "25$",
+           "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+           "id":"3"
+        },
+        {
+           "name": "strawberry",
+           "price": "25$",
+           "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+           "id":"4"
+        },
+        {
+           "name": "dio",
+           "price": "25$",
+           "img": "https://surl.li/ghmxdg",
+           "id":"5"
+        },
+        {
+            "name": "ahahahahahhah",
+            "price": "Free",
+            "img": "https://static8.depositphotos.com/1001911/1006/v/450/depositphotos_10069867-stock-illustration-clapping-emoticon.jpg",
+            "id":"6"
+         }
+        
+    ]}

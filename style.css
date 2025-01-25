@@ -37,7 +37,7 @@
 
 
       .card {
-        width: 100%;
+        width: 50%;
     
         margin-inline: auto;
         padding: 20px;
@@ -54,5 +54,13 @@
         display: block;
     
         text-align: center;
-        font-size: 1.3em;
+        font-size: 1.0em;
+    }
+    .card__img {
+        width: 25%;
+    }
+    .card__stats {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
     }
