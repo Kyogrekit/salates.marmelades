@@ -1,6 +1,6 @@
 const cardContainer = document.querySelector('.container');
 
-const url = 'product.json';
+const url = 'db.json';
 let marmaladers = [];
 
 async function fetchMarmaladeList(url) {
