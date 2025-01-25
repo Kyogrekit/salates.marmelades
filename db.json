@@ -1,14 +1,28 @@
 {
-    "users": [
+    "products": [
         {
-            "id": 1,
-            "username": "Denys",
-            "surname": "Garnat"
+           "name": "strawberry",
+           "price": "25$",
+           "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+           "id":"1"
         },
         {
-            "id": 2,
-            "username": "Dimytrii",
-            "surname": "Mihali"
+           "name": "strawberry",
+           "price": "25$",
+           "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+           "id":"2"
+        },
+        {
+           "name": "strawberry",
+           "price": "25$",
+           "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+           "id":"3"
+        },
+        {
+           "name": "strawberry",
+           "price": "25$",
+           "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+           "id":"4"
         },
         {
             "id": "100010001011000100001110000111001",
@@ -47,7 +61,7 @@
     {
        "name": "dio",
        "price": "25$",
-       "img": "https://surl.li/ghmxdg",
+       "img": "https://images.prom.ua/4393030850_w640_h640_myaka-igrashka-dio.jpg",
        "id":"5"
     }
     
