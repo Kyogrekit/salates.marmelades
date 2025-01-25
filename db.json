@@ -16,5 +16,39 @@
             "surname": "Lysencko",
             "balance": "-1000"
         }
-    ]
+        
+    ],
+    "products": [
+    {
+       "name": "strawberry",
+       "price": "25$",
+       "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+       "id":"1"
+    },
+    {
+       "name": "strawberry",
+       "price": "25$",
+       "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+       "id":"2"
+    },
+    {
+       "name": "strawberry",
+       "price": "25$",
+       "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+       "id":"3"
+    },
+    {
+       "name": "strawberry",
+       "price": "25$",
+       "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
+       "id":"4"
+    },
+    {
+       "name": "dio",
+       "price": "25$",
+       "img": "https://surl.li/ghmxdg",
+       "id":"5"
+    }
+    
+]
 }
