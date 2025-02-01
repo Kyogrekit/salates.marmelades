@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мармелад "Сладкоежка"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">test</div>
+            <nav>
+                <a href="#">Главная</a>
+                <a href="#">О нас</a>
+                <a href="#">Услуги</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="product-page">
+        <!-- Большая картинка товара -->
+        <div class="product-image-container">
+            <img src="https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0" alt="Мармелад 'Сладкоежка'" class="product-image">
+        </div>
+
+        <!-- Информация о товаре -->
+        <div class="product-info">
+            <h1 class="product-title">Мармелад "Сладкоежка"</h1>
+            <p class="product-price">$5.99</p>
+            <p class="product-description">
+                Наш мармелад — это настоящий взрыв вкуса! Изготовлен из натуральных соков и пюре, без искусственных красителей и консервантов. Идеально подходит для сладкоежек всех возрастов!
+            </p>
+
+            <!-- Выбор вариантов -->
+            <div class="product-options">
+                <label for="flavor">Вкус:</label>
+                <select id="flavor">
+                    <option value="orange">Апельсин</option>
+                    <option value="strawberry">Клубника</option>
+                    <option value="lemon">Лимон</option>
+                    <option value="apple">Яблоко</option>
+                </select>
+
+                <label for="quantity">Количество:</label>
+                <input type="number" id="quantity" value="1" min="1">
+            </div>
+
+            <!-- Кнопка добавления в корзину -->
+            <button class="add-to-cart">Добавить в корзину</button>
+
+            <!-- Дополнительная информация -->
+            <div class="additional-info">
+                <h2>Характеристики</h2>
+                <ul>
+                    <li>Вес: 200 г</li>
+                    <li>Состав: фруктовое пюре, сахар, желатин, натуральные красители</li>
+                    <li>Срок годности: 6 месяцев</li>
+                </ul>
+
+                <h2>Отзывы</h2>
+                <div class="reviews">
+                    <p>Очень вкусный мармелад! Дети в восторге!</p>
+                    <p>Натуральный вкус, чувствуются настоящие фрукты.</p>
+                </div>
+            </div>
+
+            <!-- Секция для комментариев -->
+            <div class="comment-section">
+                <h2>Оставьте ваш комментарий</h2>
+                <form id="comment-form">
+                    <textarea id="comment-input" placeholder="Напишите ваш комментарий..." required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+
+                <!-- Список комментариев -->
+                <div id="comments-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Обработчик формы для добавления комментариев
+        const commentForm = document.getElementById('comment-form');
+        const commentInput = document.getElementById('comment-input');
+        const commentsList = document.getElementById('comments-list');
+
+        commentForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Предотвращаем перезагрузку страницы
+
+            const commentText = commentInput.value.trim(); // Получаем текст комментария
+
+            if (commentText !== "") {
+                // Создаем новый элемент комментария
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.textContent = commentText;
+
+                // Добавляем комментарий в список
+                commentsList.appendChild(newComment);
+
+                // Очищаем поле ввода
+                commentInput.value = "";
+            } else {
+                alert("Пожалуйста, введите комментарий!"); // Предупреждение, если поле пустое
+            }
+        });
+    </script>
+</body>
+</html>
