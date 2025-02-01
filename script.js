@@ -1,6 +1,6 @@
 const cardContainer = document.querySelector('.container');
 
-const url = 'db.json';
+const url = 'https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/products';
 let marmaladers = [];
 
 async function fetchMarmaladeList(url) {
