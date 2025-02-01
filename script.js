@@ -34,16 +34,16 @@ function addmarmalade( marmaladeObject ) {
         price
     } = marmaladeObject;
 
-    const template = 
+    const template = `
     <div class="card">
         <h2 class="card__name">${name}</h2>
-        <img>src="${img}" alt="${name}" class="card__img"</img>
+        <img> src="${img}" alt="${name}" class="card__img">
         <div class=".card__stats">
         <span class="card__price">${price}</span></div>
          <div class="card__stat">
                    <button><a href="https://www.youtube.com/watch?v=xm3YgoEiEDc&ab_channel=10Hours">купить</a></button>
                 </div>
-    </div>
+    </div>`
     
     
     
