@@ -8,42 +8,8 @@ async function fetchMarmaladeList(url) {
     const data = await response.json();
 
     console.log(data.products);
-    return data.products;
+    return data;
 
-}
-
-async function fetchmarmalade(url) {
-    const response = await fetch(url);
-
-    return response.json();
-}
-
-async function loadMarmalades() {
-    const marmaladeList = await fetchMarmaladeList( url );
-
-    marmalades = await Promise.all(marmaladeList);
-    marmalades.forEach( addmarmalade );
-}
-
-
-function addmarmalade( marmaladeObject ) {
-    const {
-        id,
-        name,
-        img,
-        price
-    } = marmaladeObject;
-
-    const cardContainer = document.querySelector('.container');
-
-const url = 'db.json';
-let marmaladers = [];
-
-async function fetchMarmaladeList(url) {
-    const response = await fetch(url);
-    const data = await response.json();
-
-    
 }
 
 async function fetchmarmalade(url) {
@@ -78,19 +44,6 @@ function addmarmalade( marmaladeObject ) {
                    <button><a href="https://www.youtube.com/watch?v=xm3YgoEiEDc&ab_channel=10Hours">купить</a></button>
                 </div>
     </div>`
-    
-    
-    
-    
-    
-    
-    ;
-
-    cardContainer.insertAdjacentHTML( 'beforeend', template );
-}
-
-loadMarmalades()
-   
     
     
     
