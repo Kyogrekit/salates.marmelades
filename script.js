@@ -43,9 +43,7 @@ async function fetchMarmaladeList(url) {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data.products);
-    return data.products;
-
+    
 }
 
 async function fetchmarmalade(url) {
