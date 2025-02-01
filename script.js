@@ -1,5 +1,7 @@
 const cardContainer = document.querySelector('.container');
 
+
+
 const url = 'https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/products';
 let marmaladers = [];
 
@@ -39,7 +41,7 @@ function addmarmalade( marmaladeObject ) {
         <img src="${img}" alt="${name}" class="card__img">
         <div class=".card__stats">
         <span class="card__price">${price}</span></div>
-        <a href="https://www.youtube.com/watch?v=xm3YgoEiEDc&ab_channel=10Hours">Seller Profile</a>
+        <a href="userProfile.html?id=${id}">Seller Profile</a>
          <div class="card__stat">
                    <button><a href="https://www.youtube.com/watch?v=xm3YgoEiEDc&ab_channel=10Hours">купить</a></button>
                 </div>
