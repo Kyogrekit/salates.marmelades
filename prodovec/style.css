@@ -1,0 +1,328 @@
+
+header {
+    background-color: #1a1a1a; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6f61; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6f61; 
+    transform: translateY(-2px); 
+}
+
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5e6;
+}
+
+
+.product-page {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-gallery {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.main-image {
+    width: 100%;
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover {
+    transform: scale(1.05);
+}
+
+.thumbnails {
+    display: flex;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 60px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.product-info {
+    flex: 2;
+}
+
+.product-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+.product-price {
+    font-size: 24px;
+    color: #ff3300;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-options {
+    margin-bottom: 20px;
+}
+
+.product-options label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.product-options select, .product-options input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.add-to-cart {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #ff3300;
+}
+
+.additional-info {
+    margin-top: 30px;
+}
+
+.additional-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+.additional-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.additional-info ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.reviews p {
+    background-color: #fff5e6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.comment-section {
+    margin-top: 30px;
+}
+
+.comment-section h2 {
+    font-size: 22px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+#comment-form button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#comment-form button:hover {
+    background-color: #ff3300;
+}
+
+#comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    background-color: #fff5e6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+.card {
+    width: 50%;
+    margin-inline: auto;
+    padding: 25px;
+    color: #fff;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.9); 
+    border: 2px solid #ff6f61; 
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 111, 97, 0.5);
+}
+
+.card__id {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff6f61; 
+    margin-bottom: 10px;
+}
+
+.card__img {
+    width: 25%;
+    border-radius: 10px;
+    border: 2px solid #ff6f61; 
+    margin: 0 auto;
+    display: block;
+}
+
+.card__stats {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    padding: 10px;
+    background-color: rgba(255, 111, 97, 0.1); 
+    border-radius: 10px;
+}
+
+.card__stats span {
+    font-weight: bold;
+    color: #ff6f61; 
+    
+}
+/* Стили для комментариев */
+.comment-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+#comment-form button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#comment-form button:hover {
+    background-color: #ff3300;
+}
+
+#comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    background-color: #fff5e6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
