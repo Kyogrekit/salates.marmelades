@@ -1,58 +1,92 @@
   
     header {
-        background-color: #333; 
-        color: white;           
-        padding: 20px 0;       
-        text-align: center;     
-      }
-  
-     
-      .header-container {
-        display: flex;        
-        justify-content: space-between; 
-        align-items: center;     
-        padding: 0 20px;       } 
-  
-    
-      .logo {
-        font-size: 24px;
-        font-weight: bold;
-      }
-  
-      
-      nav {
-        display: flex;
-        gap: 20px;
-      }
-  
-      nav a {
-        color: white;           
-        text-decoration: none;  
-        font-size: 18px;
-      }
-  
-      nav a:hover {
-        color: #ff6f61;        
-      }
-
-
-      .card {
-        width: 100%;
-     
-        margin-inline: auto;
-        padding: 20px;
-    
-        color: #fff;
-        font-size: 1rem;
-    
-        background-color: rgba(0, 0, 0, 0.85);
-        border: 3px solid #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 7px 1px rgb(255, 255, 255);
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .card__id {
-        display: block;
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
     
-        text-align: center;
-        font-size: 1.3em;
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff6f61; 
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: #ff6f61;
+      transform: translateY(-2px);
+    }
+    
+    
+    .card {
+      width: 50%;
+      margin-inline: auto;
+      padding: 25px;
+      color: #fff;
+      font-size: 1rem;
+      background-color: rgba(0, 0, 0, 0.9); 
+      border: 2px solid #ff6f61; 
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(255, 111, 97, 0.3); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px); 
+      box-shadow: 0 6px 20px rgba(255, 111, 97, 0.5); 
+    }
+    
+    .cardid {
+      display: block;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #ff6f61; 
+      margin-bottom: 10px;
+    }
+    
+    .cardimg {
+      width: 25%;
+      border-radius: 10px;
+      border: 2px solid #ff6f61; 
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .cardstats {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 1rem;
+      padding: 10px;
+      background-color: rgba(255, 111, 97, 0.1);
+      border-radius: 10px;
+    }
+    
+    .cardstats span {
+      font-weight: bold;
+      color: #ff6f61; 
     }
