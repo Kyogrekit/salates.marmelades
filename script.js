@@ -66,9 +66,9 @@ const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/pr
     }
 
     function addToCart(productId) {
-        const product = marmaladeProducts.find(p => p.id === productId);
-        if (product) {
-            cart.push(product);
+        if (marmaladeProducts.some(p => p.id === productId)) {
+            cart.push(productId);
+            localStorage.setItem('cart', JSON.stringify(cart));
             updateCartDisplay();
         }
     }
@@ -77,16 +77,20 @@ const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/pr
         document.getElementById('cart-count').textContent = cart.length;
         const cartPreview = document.getElementById('cart-preview');
         
-        if (cart.length === 0) {
+        const cartProducts = cart.map(id => 
+            marmaladeProducts.find(p => p.id === id)
+        ).filter(p => p);
+    
+        if (cartProducts.length === 0) {
             cartPreview.innerHTML = "<p>Кошик порожній 🛒</p>";
         } else {
             cartPreview.innerHTML = `
                 <h4>Ваші солодощі:</h4>
-                ${cart.map(item => `
-                    <p>🍬 ${item.name} - ${item.price} грн</p>
+                ${cartProducts.map(product => `
+                    <p>🍬 ${product.name} - ${product.price} грн</p>
                 `).join('')}
                 <hr>
-                <p>Всього: ${cart.reduce((sum, item) => sum + item.price, 0)} грн</p>
+                <p>Всього: ${cartProducts.reduce((sum, product) => sum + product.price, 0)} грн</p>
             `;
         }
     }
@@ -101,6 +105,23 @@ const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/pr
 
     window.onload = async () => {
         await loadMarmalades(url);
+        
+        
+        const savedCart = localStorage.getItem('cart');
+        if (savedCart) {
+            try {
+                const savedIds = JSON.parse(savedCart);
+                cart = savedIds.filter(id => 
+                    marmaladeProducts.some(p => p.id === id)
+                );
+                localStorage.setItem('cart', JSON.stringify(cart)); 
+                updateCartDisplay();
+            } catch (error) {
+                console.error('Помилка завантаження корзини:', error);
+            }
+        }
+        
         showHomePage();
     };
+
     
