@@ -3,14 +3,16 @@ const cardContainer = document.querySelector('.container');
 let marmaladeProducts = [];
     let cart = []; 
 
-    async function loadMarmalades() {
+const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/products`;
+
+    async function loadMarmalades(url) {
         try {
-            const response = await fetch('data.json');
+            const response = await fetch(url);
             const data = await response.json();
-            marmaladeProducts = data.products;
+            marmaladeProducts = data;
             console.log('Дані завантажено!', marmaladeProducts);
         } catch (error) {
-            console.error('Помилка завантаження:', error);
+            console.error('Помилка завантаження:' + error);
         }
     }
 
@@ -28,7 +30,7 @@ let marmaladeProducts = [];
                 <h2>${product.name}</h2>
                 <p>${product.description}</p>
                 <div class="price-tag">${product.price} грн • ${product.weight}</div>
-                <button class="buy-button" onclick="addToCart(${product.id}, event)">Додати до кошика 🛒</button>
+                <button class="buy-button" onclick="(${product.id}, event)">Додати до кошика 🛒</button>
             </div>
         `).join('');
 
@@ -98,7 +100,7 @@ let marmaladeProducts = [];
     }
 
     window.onload = async () => {
-        await loadMarmalades();
+        await loadMarmalades(url);
         showHomePage();
     };
     
