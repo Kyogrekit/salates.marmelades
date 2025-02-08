@@ -20,36 +20,31 @@
 
     ],
     "products": [
-    {
-       "name": "strawberry",
-       "price": "25$",
-       "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
-       "id":"1"
-    },
-    {
-       "name": "strawberry",
-       "price": "25$",
-       "img": "https://s2.qwant.com/thumbr/440x330/4/6/03d746da44b35b71e972270cde614cd2ec5f4771cf9c079fa3ea1b7fab072f/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.lL-gqRRyC5huE6pbJPPTGwHaFj%26pid%3DApi&q=0&b=1&p=0&a=0",
-       "id":"2"
-    },
-    {
-       "name": "strawberry",
-       "price": "25$",
-       "img": "https://s1.qwant.com/thumbr/474x474/b/c/a1dc4e5201f859890e73f1d3d44ee105675380cbc5cb63b15dbe0ea5ce50f4/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.j5RWyZ79kf097i9-Jpd-sQHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
-       "id":"3"
-    },
-    {
-       "name": "strawberry",
-       "price": "25$",
-       "img": "https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
-       "id":"4"
-    },
-    {
-       "name": "dio",
-       "price": "25$",
-       "img": "https://surl.li/ghmxdg",
-       "id":"5"
-    }
-    
-]
+        {
+            "id": 1,
+            "name": "Ведмедики-мармеладики",
+            "price": 85,
+            "image": "https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
+            "description": "Класичні фруктові ведмедики з натуральним соком",
+            "flavors": ["Полуниця", "Лимон", "Апельсин", "Яблуко"],
+            "weight": "200г"
+        },
+        {
+            "id": 2,
+            "name": "Фруктові черв'ячки",
+            "price": 75,
+            "image": "https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
+            "description": "Веселі черв'ячки з екзотичними смаками",
+            "flavors": ["Манго", "Ківі", "Ананас", "Маракуйя"],
+            "weight": "150г"
+        }, {
+            "id": 3,
+            "name": "Фруктові черв'ячки",
+            "price": 75,
+            "image": "https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
+            "description": "Веселі черв'ячки з екзотичними смаками",
+            "flavors": ["Манго"],
+            "weight": "150г"
+        }
+    ]
 }
