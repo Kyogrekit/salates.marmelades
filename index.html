@@ -7,10 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
     <nav>
         <a href="#" onclick="showHomePage()">🍬 Головна</a>
+        <div class="cart-icon" onmouseover="showCart()" onmouseout="hideCart()">
+            🛒 <span id="cart-count">0</span>
+            <div id="cart-preview" class="cart-preview"></div>
+        </div>
     </nav>
     <div id="content"></div>
+
 
    <script src="script.js"></script>
 </body>
