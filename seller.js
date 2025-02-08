@@ -25,15 +25,11 @@ function addmarmalade( marmaladeObject ) {
     } = marmaladeObject;
 
     const template = `
-    <div class="card">
 			<div class="teammate">
 				<img src="${img}" alt="" class="teammate_img">
-				<div class="shop_item_info">
-					<p class="name">${username}</p>
-					<p class="name">${surname}</p>
-				</div>
+				<h2 class="name">${username}</h2>
+				<h2 class="name">${surname}</h2>
 			</div>
-    </div>
     `;
 
     cardContainer.insertAdjacentHTML( 'beforeend', template );

@@ -26,8 +26,8 @@ function showHomePage() {
             <img src="${product.image}" class="product-image" alt="${product.name}">
             <h2>${product.name}</h2>
             <p>${product.description}</p>
-            <div class="price-tag">${product.price} грн • ${product.weight}</div>
-            <a href="userProfile.html?id=${product.id}">Seller Profile</a>
+            <div class="price-tag">${product.price} грн • ${product.weight}</div><br>
+            <a class="seller-link" href="userProfile.html?id=${product.id}">Seller Profile</a>
             <button class="buy-button" onclick="showProduct(${product.id})">Купити 🛒</button>
         </div>
     `).join('');
