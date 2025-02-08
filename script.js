@@ -91,6 +91,7 @@ const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/pr
                 `).join('')}
                 <hr>
                 <p>Всього: ${cartProducts.reduce((sum, product) => sum + product.price, 0)} грн</p>
+                <button class="buy-button" onclick="clearCart()">купити товар 🛒</button>
             `;
         }
     }
@@ -101,6 +102,12 @@ const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/pr
 
     function hideCart() { 
         document.getElementById('cart-preview').style.display = "none";
+    }
+
+    function clearCart() {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
     }
 
     window.onload = async () => {
