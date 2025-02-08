@@ -3,53 +3,51 @@
         {
             "id": 1,
             "username": "Denys",
+            "img": "https://t3.ftcdn.net/jpg/05/70/71/06/360_F_570710660_Jana1ujcJyQTiT2rIzvfmyXzXamVcby8.jpg",
             "surname": "Garnat"
         },
         {
             "id": 2,
             "username": "Dimytrii",
+            "img": "https://i.pinimg.com/736x/bc/b1/48/bcb148c15d6c64894bab7c5a927ae2bf.jpg",
             "surname": "Mihali"
         },
         {
-            "id": "100010001011000100001110000111001",
+            "id": "3",
             "username": "YURA",
             "surname": "Lysencko",
+            "img": "https://5.imimg.com/data5/SELLER/Default/2023/5/306342832/LB/JP/ZA/46550939/solid-rom-coal-500x500.jpg",
             "balance": "-1000"
         }
         
 
     ],
     "products": [
-    {
-       "name": "strawberry",
-       "price": "25$",
-       "img": "https://sweli.com.ua/image/cache/catalog/image/cache/catalog/lotochki/klubnika_1-663x663.webp",
-       "id":"1"
-    },
-    {
-       "name": "strawberry",
-       "price": "25$",
-       "img": "https://s2.qwant.com/thumbr/440x330/4/6/03d746da44b35b71e972270cde614cd2ec5f4771cf9c079fa3ea1b7fab072f/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.lL-gqRRyC5huE6pbJPPTGwHaFj%26pid%3DApi&q=0&b=1&p=0&a=0",
-       "id":"2"
-    },
-    {
-       "name": "strawberry",
-       "price": "25$",
-       "img": "https://s1.qwant.com/thumbr/474x474/b/c/a1dc4e5201f859890e73f1d3d44ee105675380cbc5cb63b15dbe0ea5ce50f4/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.j5RWyZ79kf097i9-Jpd-sQHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
-       "id":"3"
-    },
-    {
-       "name": "strawberry",
-       "price": "25$",
-       "img": "https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
-       "id":"4"
-    },
-    {
-       "name": "dio",
-       "price": "25$",
-       "img": "https://surl.li/ghmxdg",
-       "id":"5"
-    }
-    
-]
+        {
+            "id": 1,
+            "name": "Ведмедики-мармеладики",
+            "price": 85,
+            "image": "https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
+            "description": "Класичні фруктові ведмедики з натуральним соком",
+            "flavors": ["Полуниця", "Лимон", "Апельсин", "Яблуко"],
+            "weight": "200г"
+        },
+        {
+            "id": 2,
+            "name": "Фруктові черв'ячки",
+            "price": 75,
+            "image": "https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
+            "description": "Веселі черв'ячки з екзотичними смаками",
+            "flavors": ["Манго", "Ківі", "Ананас", "Маракуйя"],
+            "weight": "150г"
+        }, {
+            "id": 3,
+            "name": "Фруктові черв'ячки",
+            "price": 75,
+            "image": "https://s2.qwant.com/thumbr/474x474/f/0/32827a250052a096ebc33ffcf51750f597332ab3ff3c24885695db478489e5/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.NiXMxakIKo1ftCMi5Yo6CgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
+            "description": "Веселі черв'ячки з екзотичними смаками",
+            "flavors": ["Манго"],
+            "weight": "150г"
+        }
+    ]
 }
