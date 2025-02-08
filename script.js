@@ -1,58 +1,72 @@
 const cardContainer = document.querySelector('.container');
 
-const url = 'https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/products';
-let marmaladers = [];
-
-async function fetchMarmaladeList(url) {
-    const response = await fetch(url);
-    const data = await response.json();
-
-    console.log(data.products);
-    return data;
-
-}
-
-async function fetchmarmalade(url) {
-    const response = await fetch(url);
-
-    return response.json();
-}
-
+let marmaladeProducts = [];
+    
 async function loadMarmalades() {
-    const marmaladeList = await fetchMarmaladeList( url );
-
-    marmalades = await Promise.all(marmaladeList);
-    marmalades.forEach( addmarmalade );
+    try {
+        const response = await fetch('db.json');
+        const data = await response.json();
+        marmaladeProducts = data.products;
+        console.log('Дані завантажено!', marmaladeProducts);
+    } catch (error) {
+        console.error('Помилка завантаження:', error);
+    }
 }
 
+function showHomePage() {
+    const content = document.getElementById('content');
+    
+    if (!marmaladeProducts.length) {
+        content.innerHTML = "<p>Завантаження товарів... 🍭</p>";
+        return;
+    }
 
-function addmarmalade( marmaladeObject ) {
-    const {
-        id,
-        name,
-        img,
-        price
-    } = marmaladeObject;
+    const productsHTML = marmaladeProducts.map(product => `
+        <div class="product-card" onclick="showProduct(${product.id})">
+            <img src="${product.image}" class="product-image" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>${product.description}</p>
+            <div class="price-tag">${product.price} грн • ${product.weight}</div>
+            <button class="buy-button">Купити 🛒</button>
+        </div>
+    `).join('');
 
-    const template = `
-    <div class="card">
-        <h2 class="card__name">${name}</h2>
-        <img src="${img}" alt="${name}" class="card__img">
-        <div class=".card__stats">
-        <span class="card__price">${price}</span></div>
-         <div class="card__stat">
-                   <button><a href="https://www.youtube.com/watch?v=xm3YgoEiEDc&ab_channel=10Hours">купить</a></button>
-                </div>
-    </div>`
-    
-    
-    
-    
-    
-    
-    ;
-
-    cardContainer.insertAdjacentHTML( 'beforeend', template );
+    content.innerHTML = `
+        <h1 style="text-align: center; color: var(--primary-color); margin: 2rem 0;">🍭 Наші солодощі 🍭</h1>
+        <div class="products-grid">${productsHTML}</div>
+    `;
 }
 
-loadMarmalades()
+function showProduct(productId) {
+    const product = marmaladeProducts.find(p => p.id === productId);
+    const content = document.getElementById('content');
+    
+    content.innerHTML = `
+        <button class="back-button" onclick="showHomePage()">← Назад до каталогу</button>
+        <div class="product-detail">
+            <img src="${product.image}" class="product-image" alt="${product.name}">
+            <h1>${product.name}</h1>
+            <div class="price-tag">${product.price} грн • ${product.weight}</div>
+            <p>${product.description}</p>
+            
+            <h3>🍇 Смаки:</h3>
+            <div class="flavor-list">
+                ${product.flavors.map(flavor => `
+                    <div class="flavor-tag">${flavor}</div>
+                `).join('')}
+            </div>
+
+            <button class="buy-button" onclick="addToCart(${product.id})">Додати до кошика 🛒</button>
+        </div>
+    `;
+}
+
+function addToCart(productId) {
+    const product = marmaladeProducts.find(p => p.id === productId);
+    alert(`✨ ${product.name} додано до кошика!`);
+}
+
+window.onload = async () => {
+    await loadMarmalades();
+    showHomePage();
+};
