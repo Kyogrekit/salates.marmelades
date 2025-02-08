@@ -3,17 +3,20 @@
         {
             "id": 1,
             "username": "Denys",
+            "img": "https://t3.ftcdn.net/jpg/05/70/71/06/360_F_570710660_Jana1ujcJyQTiT2rIzvfmyXzXamVcby8.jpg",
             "surname": "Garnat"
         },
         {
             "id": 2,
             "username": "Dimytrii",
+            "img": "https://i.pinimg.com/736x/bc/b1/48/bcb148c15d6c64894bab7c5a927ae2bf.jpg",
             "surname": "Mihali"
         },
         {
             "id": "3",
             "username": "YURA",
             "surname": "Lysencko",
+            "img": "https://5.imimg.com/data5/SELLER/Default/2023/5/306342832/LB/JP/ZA/46550939/solid-rom-coal-500x500.jpg",
             "balance": "-1000"
         }
         
