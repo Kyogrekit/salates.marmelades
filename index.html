@@ -7,35 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-    
-    
-    
-    
-    <header>
-        <div class="header-container">
-
-        
-
-
-
- 
-          <div class="logo">test</div>
-          
-      
-          <nav>
-            <a href="#">Главная</a>
-            <a href="#">О нас</a>
-            <a href="#">Услуги</a>
-            <a href="#">Контакты</a>
-          </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showHomePage()">🍬 Головна</a>
+        <div class="cart-icon" onmouseover="showCart()" onmouseout="hideCart()">
+            🛒 <span id="cart-count">0</span>
+            <div id="cart-preview" class="cart-preview"></div>
         </div>
-      </header>
-   
-      <div class="container" type="module">
-
-            
-      </div>
+    </nav>
+    <div id="content"></div>
 
 
    <script src="script.js"></script>
