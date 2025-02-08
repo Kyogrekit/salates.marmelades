@@ -22,12 +22,13 @@ function showHomePage() {
     }
 
     const productsHTML = marmaladeProducts.map(product => `
-        <div class="product-card" onclick="showProduct(${product.id})">
+        <div class="product-card">
             <img src="${product.image}" class="product-image" alt="${product.name}">
             <h2>${product.name}</h2>
             <p>${product.description}</p>
             <div class="price-tag">${product.price} грн • ${product.weight}</div>
-            <button class="buy-button">Купити 🛒</button>
+            <a href="userProfile.html?id=${product.id}">Seller Profile</a>
+            <button class="buy-button" onclick="showProduct(${product.id})">Купити 🛒</button>
         </div>
     `).join('');
 
