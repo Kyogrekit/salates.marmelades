@@ -98,6 +98,16 @@ nav a:hover {
 
 .container {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.team_tiles {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .teammate {
@@ -106,7 +116,6 @@ nav a:hover {
   border-radius: 20px;
   padding: 1.5rem;
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  text-align: center;
   border: 3px solid transparent;
   margin-inline: auto;
 }
