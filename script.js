@@ -127,6 +127,7 @@ const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/pr
                 console.error('Помилка завантаження корзини:', error);
             }
         }
-    };   
         showHomePage();
+    };   
+        
     
