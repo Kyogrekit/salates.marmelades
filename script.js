@@ -30,6 +30,7 @@ const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/pr
                 <h2>${product.name}</h2>
                 <p>${product.description}</p>
                 <div class="price-tag">${product.price} грн • ${product.weight}</div>
+                <a href="userProfile.html?id=${product.id}">Seller profile</a>
                 <button class="buy-button" onclick="(${product.id}, event)">на сторінку товару</button>
             </div>
         `).join('');
