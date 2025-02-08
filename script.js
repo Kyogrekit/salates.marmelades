@@ -122,6 +122,10 @@ const url = `https://my-json-server.typicode.com/Kyogrekit/salates.marmelades/pr
         }
         
         showHomePage();
+<<<<<<< HEAD
     };
 
     
+=======
+    };
+>>>>>>> 785bf347aaf7795a1dd19b7a57155a6ef6c12177
